@@ -4,7 +4,7 @@
 
 This guide will help you manually install Arch Linux alongside an existing OS (without wiping any drives). In my case, I'm already using Arch on my primary machine and don’t want to reconfigure it, so I will be installing it on my gaming PC alongside a Windows 11 installation.
 
-If you're already familiar with Unix systems or have ADHD like me and prefer a more concise approach, check out the [TL:DR Guide](TLDR.md) for a quicker, text-light version.
+If you're already familiar with Unix systems or have ADHD like me and prefer a more concise approach, check out the [TL;DR Guide](TLDR.md) for a quicker, text-light version.
 
 ## Table of Contents
 
