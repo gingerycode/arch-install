@@ -17,6 +17,8 @@ If you're already familiar with Unix systems or have ADHD like me and prefer a m
     - [1. Boot from the USB](#1-boot-from-the-usb)
     - [2. Enter the Arch Linux Installer](#2-enter-the-arch-linux-installer)
     - [3. Connect to the Network](#3-connect-to-the-network)
+        - [Connect via Wi-Fi](#connect-via-wi-fi)
+        - [Connect via Ethernet cable](#connect-via-ethernet-cable)
     - [2. Identify the Disk for Installation](#2-identify-the-disk-for-installation)
     - [3. Partition the Disk](#3-partition-the-disk)
     - [4. Write the Changes](#4-write-the-changes)
@@ -107,6 +109,42 @@ ip addr show
 ```
 
 If you see an IP address listed, you're good to go. If not, you'll need to connect via Wi-Fi or Ethernet.
+
+#### Connect via Wi-Fi
+
+Open the Wi-Fi tool:
+
+```bash
+iwctl
+```
+
+List the available devices:
+
+```bash
+station wlan0 get-networks
+```
+
+Remember the `{network_name}` you need and exit the interactive menu:
+
+```bash
+exit
+```
+
+Connect to your Wi-Fi network:
+
+```bash
+iwctl station wlan0 connect {network_name} --passphrase "{password}"
+```
+
+Check if you have an IP address:
+
+```bash
+ip addr show
+```
+
+#### Connect via Ethernet cable
+
+I mean, just plug it in. That's it.
 
 ### 2. Identify the Disk for Installation
 
@@ -441,6 +479,8 @@ You will see the VGA device listed. In my case, it's an NVIDIA card.
 
 #### NVIDIA
 
+<details>
+<summary>Click to expand</summary>
 If you have an NVIDIA card, you will need to install the proprietary drivers. You can do this by installing the `nvidia` & `nvidia-utils` package:
 
 If you installed the LTS kernel, you will also need to install the `nvidia-lts` package.
@@ -513,7 +553,12 @@ ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 <!-- **TROUBLE SHOOTING:** If you have an NVIDIA card and after booting all you see is a black screen with a static underscore in the top-left corner, run this magic command: -->
 
+</details>
+
 #### AMD / INTEL
+
+<details>
+<summary>Click to expand</summary>
 
 You will need to install `mesa` and `intel-media-driver` or `libva-mesa-driver` according to your hardware:
 
@@ -524,6 +569,8 @@ pacman -S mesa intel-media-driver
 # For AMD
 pacman -S mesa libva-mesa-driver
 ```
+
+</details>
 
 ### 7. Generating Ram Disks for our Kernels
 

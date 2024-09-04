@@ -142,6 +142,9 @@ pacman -S linux linux-headers linux-lts linux-lts-headers linux-firmware
 
 #### NVIDIA
 
+<details>
+<summary>Click to expand</summary>
+
 If you installed the LTS kernel, you will also need to install the `nvidia-lts` package.
 
 ```bash
@@ -184,7 +187,12 @@ to include the following:
 options nvidia-drm modeset=1 fbdev=1
 ```
 
+</details>
+
 #### AMD / INTEL
+
+<details>
+<summary>Click to expand</summary>
 
 ```bash
 # For Intel
@@ -193,6 +201,8 @@ pacman -S mesa intel-media-driver
 # For AMD
 pacman -S mesa libva-mesa-driver
 ```
+
+</details>
 
 ### 6. Generating Ram Disks for our Kernels
 
