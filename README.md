@@ -112,8 +112,6 @@ If you see an IP address listed, you're good to go. If not, you'll need to conne
 
 #### Connect via Wi-Fi
 
-Open the Wi-Fi tool:
-
 ```bash
 iwctl
 ```
