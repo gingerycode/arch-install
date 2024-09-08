@@ -1,4 +1,4 @@
-# Installing Arch Linux Alongside a Pre-Installed OS [TL;DR]
+# Installing Arch Linux [ ANY GPU | DUALBOOT FRIENDLY | TL;DR ]
 
 **#manuall** **#dualboot** **#gnome+gdm** **#encrypted** **#lvm** **#nvidia-friendly**
 
